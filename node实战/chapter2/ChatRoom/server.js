@@ -69,7 +69,7 @@ server.listen(3000,function(){
 //加载一个定制的Node模块，它提供的逻辑是用来处理基于Socket.IO的服务器聊天功能。
 var chartServer = require('./lib/chat_server');
 // 启动Socket.IO服务器，给它提供一个已经定义好的HTTP服务器，这样就能跟HTTP服务器共享同一个TCP/IP端口。
-chartServer.listem(server);
+chartServer.listen(server);
 
 
 
