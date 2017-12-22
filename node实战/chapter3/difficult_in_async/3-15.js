@@ -10,7 +10,7 @@ var color = 'blue';
      })
 })(color);
 
-color = 'green';
+color = 'green'; 
 
 
 
