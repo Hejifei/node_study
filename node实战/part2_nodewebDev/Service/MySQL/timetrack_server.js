@@ -5,7 +5,7 @@ var mysql = require('mysql');
 
 // 连接MySQL
 var db = mysql.createConnection({
-    host: '192.168.0.108',
+    host: '192.168.0.116',
     user: 'root',
     password: '123456',
     database: 'timetrack'
@@ -13,7 +13,6 @@ var db = mysql.createConnection({
 
 var server = http.createServer(function(req,res){
     switch (req.method){
-        //HTTP POST请求路由
         case 'POST':
             switch (req.url){
                 case '/':
@@ -27,7 +26,6 @@ var server = http.createServer(function(req,res){
                     break;
             }
             break;
-        //HTTP GET请求路由
         case 'GET':
             switch(req.url){
                 case '/':
@@ -48,10 +46,10 @@ db.query(
     +"date DATE, "
     +"archived INT(1) DEFAULT 0, "
     +"description LONGTEXT, "
-    +"PRIMARY KEY(id) ",
+    +"PRIMARY KEY(id)) ",
     function (err){
         if (err) throw err;
         console.log('Server started...');
-        server.listen(3000,'192.168.0.108');
+        server.listen(3000,'192.168.0.116');
     }
 )
