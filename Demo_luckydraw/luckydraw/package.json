@@ -1,0 +1,24 @@
+{
+  "name": "luckydraw",
+  "version": "1.0.0",
+  "description": "lucky draw",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "koa",
+    "async"
+  ],
+  "author": "Hejifei",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "koa": "2.0.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "7.0.0",
+    "mime": "1.3.4",
+    "mz": "2.4.0",
+    "node-xlsx": "^0.11.2",
+    "nunjucks": "^3.0.1"
+  }
+}
